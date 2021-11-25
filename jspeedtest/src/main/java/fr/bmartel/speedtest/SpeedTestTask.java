@@ -55,7 +55,6 @@ import java.util.concurrent.*;
  * @author Bertrand Martel
  */
 public class SpeedTestTask {
-    private static final String TAG = "rose";
 
     /**
      * socket server hostname.
@@ -427,7 +426,7 @@ public class SpeedTestTask {
                                 }
 
                                 if (mRepeatWrapper.isRepeatUpload()) {
-                                    Log.d(TAG," 1. update with mUploadFileSize: " +mUploadFileSize);
+                                    System.out.println(" 1. update with mUploadFileSize: " +mUploadFileSize);
                                     mRepeatWrapper.updatePacketSize(mUploadFileSize);
                                 }
 
@@ -625,7 +624,7 @@ public class SpeedTestTask {
                 mDownloadPckSize = new BigDecimal(httpFrame.getContentLength());
 
                 if (mRepeatWrapper.isRepeatDownload()) {
-                    Log.d(TAG," 2. update with mDownloadPckSize: " +mDownloadPckSize);
+                    System.out.println(" 2. update with mDownloadPckSize: " +mDownloadPckSize);
                     mRepeatWrapper.updatePacketSize(mDownloadPckSize);
                 }
 
@@ -1115,7 +1114,7 @@ public class SpeedTestTask {
                         mDownloadPckSize = new BigDecimal(getFileSize(ftpclient, url.getPath()));
 
                         if (mRepeatWrapper.isRepeatDownload()) {
-                            Log.d(TAG," 3. update with mDownloadPckSize: " +mDownloadPckSize);
+                            System.out.println(" 3. update with mDownloadPckSize: " +mDownloadPckSize);
 
                             mRepeatWrapper.updatePacketSize(mDownloadPckSize);
                         }
@@ -1274,7 +1273,7 @@ public class SpeedTestTask {
                             }
 
                             if (mRepeatWrapper.isRepeatUpload()) {
-                                Log.d(TAG," 4. update with mUploadFileSize: " +mUploadFileSize);
+                                System.out.println(" 4. update with mUploadFileSize: " +mUploadFileSize);
 
                                 mRepeatWrapper.updatePacketSize(mUploadFileSize);
                             }

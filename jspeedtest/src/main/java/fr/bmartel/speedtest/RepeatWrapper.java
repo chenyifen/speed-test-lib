@@ -40,7 +40,6 @@ import java.util.*;
  * @author Bertrand Martel
  */
 public class RepeatWrapper {
-    private static final String TAG = "rose";
 
     /**
      * transfer rate list.
@@ -161,7 +160,7 @@ public class RepeatWrapper {
 
 
         if (!mRepeatTransferRateList.isEmpty()) {
-            Log.d(TAG, "SpeedTestReport  #mRepeatPacketSize = "+mRepeatPacketSize);
+            System.out.println("SpeedTestReport  #mRepeatPacketSize = "+mRepeatPacketSize);
             downloadRepeatRateOctet = rates.add(downloadRepeatRateOctet).divide(new BigDecimal(mRepeatTransferRateList
                     .size()).add
                     (new BigDecimal(mRepeatTempPckSize).divide(mRepeatPacketSize, scale, roundingMode)
